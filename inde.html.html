@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0e6f6;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff69b4;
+            animation: slideIn 2s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 20px;
+            animation: fadeInText 2s ease-in-out;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .emoji {
+            font-size: 4em;
+            color: red;
+            animation: bounce 1.5s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+
+        .button {
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.1em; 
+            margin: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            animation: scaleButton 1s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #ff1493;
+            transform: scale(1.1);
+        }
+
+        @keyframes scaleButton {
+            0% { transform: scale(0.8); }
+            100% { transform: scale(1); }
+        }
+
+        .love-heart {
+            font-size: 6em;
+            color: red;
+            animation: heartBeat 1.5s infinite;
+        }
+
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Mobile-responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .emoji {
+                font-size: 3em;
+            }
+            .button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+            .love-heart {
+                font-size: 5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey Samarya!</h1>
+        <div class="love-heart">💖</div>
+        <p class="emoji">💖</p>
+        <p>Once upon a time, in a world full of ordinary things, there was a person who found something extraordinary... You. <br> Now, my question is simple...</p>
+        <h2>Will you be my forever?</h2>
+        <button class="button" onclick="answer('Yes')">Yes, I will!</button>
+        <button class="button" onclick="answer('Forever, Yes!')">Forever, Yes!</button>
+    </div>
+
+    <script>
+        function answer(response) {
+            alert('Woohoo! You said ' + response + ' 😍💖');
+            document.body.innerHTML = "<h1>Thank you, Samyara! You made my heart skip a beat!</h1><p>Your answer has filled my day with joy! 💖</p><div class='love-heart'>💖</div>";
+        }
+    </script>
+</body>
+</html>
